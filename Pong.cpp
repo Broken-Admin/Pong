@@ -68,7 +68,7 @@ int main()
     const sf::Time AITime   = sf::seconds(0.1f);
     const float paddleSpeed = 400.f;
     float rightPaddleSpeed  = 0.f;
-    const float ballSpeed   = 450.f;
+    float ballSpeed         = 450.f;
     float ballAngle         = 0.f; // to be changed later
 
     sf::Clock clock;
@@ -180,6 +180,7 @@ int main()
             // Move the ball
             float factor = ballSpeed * deltaTime;
             ball.move(std::cos(ballAngle) * factor, std::sin(ballAngle) * factor);
+            ballSpeed+=.01f;
 
             // Check collisions between the ball and the screen
             if (ball.getPosition().x - ballRadius < 0.f)
@@ -251,6 +252,8 @@ int main()
         {
             // Draw the pause message
             window.draw(pauseMessage);
+            // Reset ball speed
+            ballSpeed=450.f;
         }
 
         // Display things on screen
