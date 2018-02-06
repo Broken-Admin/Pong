@@ -140,13 +140,13 @@ int main()
 
             // Move the player's paddle
             if ((sf::Keyboard::isKeyPressed(sf::Keyboard::W) ||
-            sf::Keyboard::isKeyPressed(sf::Keyboard::Num8)) &&
+            sf::Keyboard::isKeyPressed(sf::Keyboard::U)) &&
                (leftPaddle.getPosition().y - paddleSize.y / 2 > 5.f))
             {
                 leftPaddle.move(0.f, -paddleSpeed * deltaTime);
             }
             if ((sf::Keyboard::isKeyPressed(sf::Keyboard::S) ||
-            sf::Keyboard::isKeyPressed(sf::Keyboard::Num2))  &&
+            sf::Keyboard::isKeyPressed(sf::Keyboard::J))  &&
                (leftPaddle.getPosition().y + paddleSize.y / 2 < gameHeight - 5.f))
             {
                 leftPaddle.move(0.f, paddleSpeed * deltaTime);
@@ -154,13 +154,13 @@ int main()
 
             // Move the player 2's paddle
             if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Up) ||
-            sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad2)) &&
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad8)) &&
                (rightPaddle.getPosition().y - paddleSize.y / 2 > 5.f))
             {
                 rightPaddle.move(0.f, -paddleSpeed * deltaTime);
             }
             if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Down) ||
-            sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad8)) &&
+            sf::Keyboard::isKeyPressed(sf::Keyboard::Numpad2)) &&
                (rightPaddle.getPosition().y + paddleSize.y / 2 < gameHeight - 5.f))
             {
                 rightPaddle.move(0.f, paddleSpeed * deltaTime);
