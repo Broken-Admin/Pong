@@ -52,7 +52,7 @@ int main()
 
     // Load the text font
     sf::Font font;
-    if (!font.loadFromFile("resources/unifont.ttf"))
+    if (!font.loadFromFile("resources/sansation.ttf"))
         return EXIT_FAILURE;
 
     // Initialize the pause message
@@ -61,7 +61,8 @@ int main()
     pauseMessage.setCharacterSize(40);
     pauseMessage.setPosition(170.f, 150.f);
     pauseMessage.setString("Welcome to pong!\nPress space to start the game");
-    pauseMessage.setColor(sf::Color(0, 0, 0));
+    pauseMessage.setOutlineColor(sf::Color(0, 0, 0));
+    pauseMessage.setFillColor(sf::Color(0, 0, 0));
 
     // Define the paddles properties
     sf::Clock AITimer;
